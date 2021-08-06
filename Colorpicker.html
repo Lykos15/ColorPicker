@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Colorpicker</title>
+    <style>
+      .ColorSelect{
+        height: min-content;
+        width: min-content;
+      }
+
+      #preview{
+        background-color: rgb(0, 0, 255);
+        margin: auto;
+        height: 16px;
+        width: 70%;
+        border-style: solid;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ColorSelect">
+      <svg height="200" width="224" onmouseout="ChangePreviewColor(&quot;none&quot;)">
+        <polygon points="60.56,0 69.22,5 69.22,15 60.56,20 51.9,15 51.9,5" style="fill:#003366" onClick="ChangeSelectedColor(&quot;#003366&quot;)" onMouseOver="ChangePreviewColor(&quot;#003366&quot;)"/>
+        <polygon points="77.86,0 86.52,5 86.52,15 77.86,20 69.2,15 69.2,5" style="fill:#336699" onClick="ChangeSelectedColor(&quot;#336699&quot;)" onMouseOver="ChangePreviewColor(&quot;#336699&quot;)"/>
+        <polygon points="95.16,0 103.82,5 103.82,15 95.16,20 86.5,15 86.5,5" style="fill:#3366CC" onClick="ChangeSelectedColor(&quot;#3366CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#3366CC&quot;)"/>
+        <polygon points="112.46,0 121.12,5 121.12,15 112.46,20 103.8,15 103.8,5" style="fill:#003399" onClick="ChangeSelectedColor(&quot;#003399&quot;)" onMouseOver="ChangePreviewColor(&quot;#003399&quot;)"/>
+        <polygon points="129.76,0 138.42,5 138.42,15 129.76,20 121.1,15 121.1,5" style="fill:#000099" onClick="ChangeSelectedColor(&quot;#000099&quot;)" onMouseOver="ChangePreviewColor(&quot;#000099&quot;)"/>
+        <polygon points="147.06,0 155.72,5 155.72,15 147.06,20 138.4,15 138.4,5" style="fill:#0000CC" onClick="ChangeSelectedColor(&quot;#0000CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#0000CC&quot;)"/>
+        <polygon points="164.36,0 173.02,5 173.02,15 164.36,20 155.7,15 155.7,5" style="fill:#000066" onClick="ChangeSelectedColor(&quot;#000066&quot;)" onMouseOver="ChangePreviewColor(&quot;#000066&quot;)"/>
+        <polygon points="51.91,15 60.57,20 60.57,30 51.91,35 43.25,30 43.25,20" style="fill:#006666" onClick="ChangeSelectedColor(&quot;#006666&quot;)" onMouseOver="ChangePreviewColor(&quot;#006666&quot;)"/>
+        <polygon points="69.21,15 77.87,20 77.87,30 69.21,35 60.55,30 60.55,20" style="fill:#006699" onClick="ChangeSelectedColor(&quot;#006699&quot;)" onMouseOver="ChangePreviewColor(&quot;#006699&quot;)"/>
+        <polygon points="86.51,15 95.17,20 95.17,30 86.51,35 77.85,30 77.85,20" style="fill:#0099CC" onClick="ChangeSelectedColor(&quot;#0099CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#0099CC&quot;)"/>
+        <polygon points="103.81,15 112.47,20 112.47,30 103.81,35 95.15,30 95.15,20" style="fill:#0066CC" onClick="ChangeSelectedColor(&quot;#0066CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#0066CC&quot;)"/>
+        <polygon points="121.11,15 129.77,20 129.77,30 121.11,35 112.45,30 112.45,20" style="fill:#0033CC" onClick="ChangeSelectedColor(&quot;#0033CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#0033CC&quot;)"/>
+        <polygon points="138.41,15 147.07,20 147.07,30 138.41,35 129.75,30 129.75,20" style="fill:#0000FF" onClick="ChangeSelectedColor(&quot;#0000FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#0000FF&quot;)"/>
+        <polygon points="155.71,15 164.37,20 164.37,30 155.71,35 147.05,30 147.05,20" style="fill:#3333FF" onClick="ChangeSelectedColor(&quot;#3333FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#3333FF&quot;)"/>
+        <polygon points="173.01,15 181.67,20 181.67,30 173.01,35 164.35,30 164.35,20" style="fill:#333399" onClick="ChangeSelectedColor(&quot;#333399&quot;)" onMouseOver="ChangePreviewColor(&quot;#333399&quot;)"/>
+        <polygon points="43.26,30 51.92,35 51.92,45 43.26,50 34.6,45 34.6,35" style="fill:#669999" onClick="ChangeSelectedColor(&quot;#669999&quot;)" onMouseOver="ChangePreviewColor(&quot;#669999&quot;)"/>
+        <polygon points="60.56,30 69.22,35 69.22,45 60.56,50 51.9,45 51.9,35" style="fill:#009999" onClick="ChangeSelectedColor(&quot;#009999&quot;)" onMouseOver="ChangePreviewColor(&quot;#009999&quot;)"/>
+        <polygon points="77.86,30 86.52,35 86.52,45 77.86,50 69.2,45 69.2,35" style="fill:#33CCCC" onClick="ChangeSelectedColor(&quot;#33CCCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#33CCCC&quot;)"/>
+        <polygon points="95.16,30 103.82,35 103.82,45 95.16,50 86.5,45 86.5,35" style="fill:#00CCFF" onClick="ChangeSelectedColor(&quot;#00CCFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#00CCFF&quot;)"/>
+        <polygon points="112.46,30 121.12,35 121.12,45 112.46,50 103.8,45 103.8,35" style="fill:#0099FF" onClick="ChangeSelectedColor(&quot;#0099FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#0099FF&quot;)"/>
+        <polygon points="129.76,30 138.42,35 138.42,45 129.76,50 121.1,45 121.1,35" style="fill:#0066FF" onClick="ChangeSelectedColor(&quot;#0066FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#0066FF&quot;)"/>
+        <polygon points="147.06,30 155.72,35 155.72,45 147.06,50 138.4,45 138.4,35" style="fill:#3366FF" onClick="ChangeSelectedColor(&quot;#3366FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#3366FF&quot;)"/>
+        <polygon points="164.36,30 173.02,35 173.02,45 164.36,50 155.7,45 155.7,35" style="fill:#3333CC" onClick="ChangeSelectedColor(&quot;#3333CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#3333CC&quot;)"/>
+        <polygon points="181.66,30 190.32,35 190.32,45 181.66,50 173,45 173,35" style="fill:#666699" onClick="ChangeSelectedColor(&quot;#666699&quot;)" onMouseOver="ChangePreviewColor(&quot;#666699&quot;)"/>
+        <polygon points="34.61,45 43.27,50 43.27,60 34.61,65 25.95,60 25.95,50" style="fill:#339966" onClick="ChangeSelectedColor(&quot;#339966&quot;)" onMouseOver="ChangePreviewColor(&quot;#339966&quot;)"/>
+        <polygon points="51.91,45 60.57,50 60.57,60 51.91,65 43.25,60 43.25,50" style="fill:#00CC99" onClick="ChangeSelectedColor(&quot;#00CC99&quot;)" onMouseOver="ChangePreviewColor(&quot;#00CC99&quot;)"/>
+        <polygon points="69.21,45 77.87,50 77.87,60 69.21,65 60.55,60 60.55,50" style="fill:#00FFCC" onClick="ChangeSelectedColor(&quot;#00FFCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#00FFCC&quot;)"/>
+        <polygon points="86.51,45 95.17,50 95.17,60 86.51,65 77.85,60 77.85,50" style="fill:#00FFFF" onClick="ChangeSelectedColor(&quot;#00FFFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#00FFFF&quot;)"/>
+        <polygon points="103.81,45 112.47,50 112.47,60 103.81,65 95.15,60 95.15,50" style="fill:#33CCFF" onClick="ChangeSelectedColor(&quot;#33CCFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#33CCFF&quot;)"/>
+        <polygon points="121.11,45 129.77,50 129.77,60 121.11,65 112.45,60 112.45,50" style="fill:#3399FF" onClick="ChangeSelectedColor(&quot;#3399FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#3399FF&quot;)"/>
+        <polygon points="138.41,45 147.07,50 147.07,60 138.41,65 129.75,60 129.75,50" style="fill:#6699FF" onClick="ChangeSelectedColor(&quot;#6699FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#6699FF&quot;)"/>
+        <polygon points="155.71,45 164.37,50 164.37,60 155.71,65 147.05,60 147.05,50" style="fill:#6666FF" onClick="ChangeSelectedColor(&quot;#6666FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#6666FF&quot;)"/>
+        <polygon points="173.01,45 181.67,50 181.67,60 173.01,65 164.35,60 164.35,50" style="fill:#6600FF" onClick="ChangeSelectedColor(&quot;#6600FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#6600FF&quot;)"/>
+        <polygon points="190.31,45 198.97,50 198.97,60 190.31,65 181.65,60 181.65,50" style="fill:#6600CC" onClick="ChangeSelectedColor(&quot;#6600CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#6600CC&quot;)"/>
+        <polygon points="25.96,60 34.62,65 34.62,75 25.96,80 17.3,75 17.3,65" style="fill:#339933" onClick="ChangeSelectedColor(&quot;#339933&quot;)" onMouseOver="ChangePreviewColor(&quot;#339933&quot;)"/>
+        <polygon points="43.26,60 51.92,65 51.92,75 43.26,80 34.6,75 34.6,65" style="fill:#00CC66" onClick="ChangeSelectedColor(&quot;#00CC66&quot;)" onMouseOver="ChangePreviewColor(&quot;#00CC66&quot;)"/>
+        <polygon points="60.56,60 69.22,65 69.22,75 60.56,80 51.9,75 51.9,65" style="fill:#00FF99" onClick="ChangeSelectedColor(&quot;#00FF99&quot;)" onMouseOver="ChangePreviewColor(&quot;#00FF99&quot;)"/>
+        <polygon points="77.86,60 86.52,65 86.52,75 77.86,80 69.2,75 69.2,65" style="fill:#66FFCC" onClick="ChangeSelectedColor(&quot;#66FFCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#66FFCC&quot;)"/>
+        <polygon points="95.16,60 103.82,65 103.82,75 95.16,80 86.5,75 86.5,65" style="fill:#66FFFF" onClick="ChangeSelectedColor(&quot;#66FFFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#66FFFF&quot;)"/>
+        <polygon points="112.46,60 121.12,65 121.12,75 112.46,80 103.8,75 103.8,65" style="fill:#66CCFF" onClick="ChangeSelectedColor(&quot;#66CCFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#66CCFF&quot;)"/>
+        <polygon points="129.76,60 138.42,65 138.42,75 129.76,80 121.1,75 121.1,65" style="fill:#99CCFF" onClick="ChangeSelectedColor(&quot;#99CCFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#99CCFF&quot;)"/>
+        <polygon points="147.06,60 155.72,65 155.72,75 147.06,80 138.4,75 138.4,65" style="fill:#9999FF" onClick="ChangeSelectedColor(&quot;#9999FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#9999FF&quot;)"/>
+        <polygon points="164.36,60 173.02,65 173.02,75 164.36,80 155.7,75 155.7,65" style="fill:#9966FF" onClick="ChangeSelectedColor(&quot;#9966FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#9966FF&quot;)"/>
+        <polygon points="181.66,60 190.32,65 190.32,75 181.66,80 173,75 173,65" style="fill:#9933FF" onClick="ChangeSelectedColor(&quot;#9933FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#9933FF&quot;)"/>
+        <polygon points="198.96,60 207.62,65 207.62,75 198.96,80 190.3,75 190.3,65" style="fill:#9900FF" onClick="ChangeSelectedColor(&quot;#9900FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#9900FF&quot;)"/>
+        <polygon points="17.31,75 25.97,80 25.97,90 17.31,95 8.65,90 8.65,80" style="fill:#006600" onClick="ChangeSelectedColor(&quot;#006600&quot;)" onMouseOver="ChangePreviewColor(&quot;#006600&quot;)"/>
+        <polygon points="34.61,75 43.27,80 43.27,90 34.61,95 25.95,90 25.95,80" style="fill:#00CC00" onClick="ChangeSelectedColor(&quot;#00CC00&quot;)" onMouseOver="ChangePreviewColor(&quot;#00CC00&quot;)"/>
+        <polygon points="51.91,75 60.57,80 60.57,90 51.91,95 43.25,90 43.25,80" style="fill:#00FF00" onClick="ChangeSelectedColor(&quot;#00FF00&quot;)" onMouseOver="ChangePreviewColor(&quot;#00FF00&quot;)"/>
+        <polygon points="69.21,75 77.87,80 77.87,90 69.21,95 60.55,90 60.55,80" style="fill:#66FF99" onClick="ChangeSelectedColor(&quot;#66FF99&quot;)" onMouseOver="ChangePreviewColor(&quot;#66FF99&quot;)"/>
+        <polygon points="86.51,75 95.17,80 95.17,90 86.51,95 77.85,90 77.85,80" style="fill:#99FFCC" onClick="ChangeSelectedColor(&quot;#99FFCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#99FFCC&quot;)"/>
+        <polygon points="103.81,75 112.47,80 112.47,90 103.81,95 95.15,90 95.15,80" style="fill:#CCFFFF" onClick="ChangeSelectedColor(&quot;#CCFFFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCFFFF&quot;)"/>
+        <polygon points="121.11,75 129.77,80 129.77,90 121.11,95 112.45,90 112.45,80" style="fill:#CCCCFF" onClick="ChangeSelectedColor(&quot;#CCCCFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCCCFF&quot;)"/>
+        <polygon points="138.41,75 147.07,80 147.07,90 138.41,95 129.75,90 129.75,80" style="fill:#CC99FF" onClick="ChangeSelectedColor(&quot;#CC99FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC99FF&quot;)"/>
+        <polygon points="155.71,75 164.37,80 164.37,90 155.71,95 147.05,90 147.05,80" style="fill:#CC66FF" onClick="ChangeSelectedColor(&quot;#CC66FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC66FF&quot;)"/>
+        <polygon points="173.01,75 181.67,80 181.67,90 173.01,95 164.35,90 164.35,80" style="fill:#CC33FF" onClick="ChangeSelectedColor(&quot;#CC33FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC33FF&quot;)"/>
+        <polygon points="190.31,75 198.97,80 198.97,90 190.31,95 181.65,90 181.65,80" style="fill:#CC00FF" onClick="ChangeSelectedColor(&quot;#CC00FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC00FF&quot;)"/>
+        <polygon points="207.61,75 216.27,80 216.27,90 207.61,95 198.95,90 198.95,80" style="fill:#9900CC" onClick="ChangeSelectedColor(&quot;#9900CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#9900CC&quot;)"/>
+        <polygon points="8.66,90 17.32,95 17.32,105 8.66,110 0,105 0,95" style="fill:#003300" onClick="ChangeSelectedColor(&quot;#003300&quot;)" onMouseOver="ChangePreviewColor(&quot;#003300&quot;)"/>
+        <polygon points="25.96,90 34.62,95 34.62,105 25.96,110 17.3,105 17.3,95" style="fill:#009933" onClick="ChangeSelectedColor(&quot;#009933&quot;)" onMouseOver="ChangePreviewColor(&quot;#009933&quot;)"/>
+        <polygon points="43.26,90 51.92,95 51.92,105 43.26,110 34.6,105 34.6,95" style="fill:#33CC33" onClick="ChangeSelectedColor(&quot;#33CC33&quot;)" onMouseOver="ChangePreviewColor(&quot;#33CC33&quot;)"/>
+        <polygon points="60.56,90 69.22,95 69.22,105 60.56,110 51.9,105 51.9,95" style="fill:#66FF66" onClick="ChangeSelectedColor(&quot;#66FF66&quot;)" onMouseOver="ChangePreviewColor(&quot;#66FF66&quot;)"/>
+        <polygon points="77.86,90 86.52,95 86.52,105 77.86,110 69.2,105 69.2,95" style="fill:#99FF99" onClick="ChangeSelectedColor(&quot;#99FF99&quot;)" onMouseOver="ChangePreviewColor(&quot;#99FF99&quot;)"/>
+        <polygon points="95.16,90 103.82,95 103.82,105 95.16,110 86.5,105 86.5,95" style="fill:#CCFFCC" onClick="ChangeSelectedColor(&quot;#CCFFCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCFFCC&quot;)"/>
+        <polygon points="112.46,90 121.12,95 121.12,105 112.46,110 103.8,105 103.8,95" style="fill:#FFFFFF" onClick="ChangeSelectedColor(&quot;#FFFFFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFFFFF&quot;)"/>
+        <polygon points="129.76,90 138.42,95 138.42,105 129.76,110 121.1,105 121.1,95" style="fill:#FFCCFF" onClick="ChangeSelectedColor(&quot;#FFCCFF&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFCCFF&quot;)"/>
+        <polygon points="147.06,90 155.72,95 155.72,105 147.06,110 138.4,105 138.4,95" style="fill:#FF99FF" onClick="ChangeSelectedColor(&quot;#FF99FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF99FF&quot;)"/>
+        <polygon points="164.36,90 173.02,95 173.02,105 164.36,110 155.7,105 155.7,95" style="fill:#FF66FF" onClick="ChangeSelectedColor(&quot;#FF66FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF66FF&quot;)"/>
+        <polygon points="181.66,90 190.32,95 190.32,105 181.66,110 173,105 173,95" style="fill:#FF00FF" onClick="ChangeSelectedColor(&quot;#FF00FF&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF00FF&quot;)"/>
+        <polygon points="198.96,90 207.62,95 207.62,105 198.96,110 190.3,105 190.3,95" style="fill:#CC00CC" onClick="ChangeSelectedColor(&quot;#CC00CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC00CC&quot;)"/>
+        <polygon points="216.26,90 224.92,95 224.92,105 216.26,110 207.6,105 207.6,95" style="fill:#660066" onClick="ChangeSelectedColor(&quot;#660066&quot;)" onMouseOver="ChangePreviewColor(&quot;#660066&quot;)"/>
+        <polygon points="17.31,105 25.97,110 25.97,120 17.31,125 8.65,120 8.65,110" style="fill:#336600" onClick="ChangeSelectedColor(&quot;#336600&quot;)" onMouseOver="ChangePreviewColor(&quot;#336600&quot;)"/>
+        <polygon points="34.61,105 43.27,110 43.27,120 34.61,125 25.95,120 25.95,110" style="fill:#009900" onClick="ChangeSelectedColor(&quot;#009900&quot;)" onMouseOver="ChangePreviewColor(&quot;#009900&quot;)"/>
+        <polygon points="51.91,105 60.57,110 60.57,120 51.91,125 43.25,120 43.25,110" style="fill:#66FF33" onClick="ChangeSelectedColor(&quot;#66FF33&quot;)" onMouseOver="ChangePreviewColor(&quot;#66FF33&quot;)"/>
+        <polygon points="69.21,105 77.87,110 77.87,120 69.21,125 60.55,120 60.55,110" style="fill:#99FF66" onClick="ChangeSelectedColor(&quot;#99FF66&quot;)" onMouseOver="ChangePreviewColor(&quot;#99FF66&quot;)"/>
+        <polygon points="86.51,105 95.17,110 95.17,120 86.51,125 77.85,120 77.85,110" style="fill:#CCFF99" onClick="ChangeSelectedColor(&quot;#CCFF99&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCFF99&quot;)"/>
+        <polygon points="103.81,105 112.47,110 112.47,120 103.81,125 95.15,120 95.15,110" style="fill:#FFFFCC" onClick="ChangeSelectedColor(&quot;#FFFFCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFFFCC&quot;)"/>
+        <polygon points="121.11,105 129.77,110 129.77,120 121.11,125 112.45,120 112.45,110" style="fill:#FFCCCC" onClick="ChangeSelectedColor(&quot;#FFCCCC&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFCCCC&quot;)"/>
+        <polygon points="138.41,105 147.07,110 147.07,120 138.41,125 129.75,120 129.75,110" style="fill:#FF99CC" onClick="ChangeSelectedColor(&quot;#FF99CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF99CC&quot;)"/>
+        <polygon points="155.71,105 164.37,110 164.37,120 155.71,125 147.05,120 147.05,110" style="fill:#FF66CC" onClick="ChangeSelectedColor(&quot;#FF66CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF66CC&quot;)"/>
+        <polygon points="173.01,105 181.67,110 181.67,120 173.01,125 164.35,120 164.35,110" style="fill:#FF33CC" onClick="ChangeSelectedColor(&quot;#FF33CC&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF33CC&quot;)"/>
+        <polygon points="190.31,105 198.97,110 198.97,120 190.31,125 181.65,120 181.65,110" style="fill:#CC0099" onClick="ChangeSelectedColor(&quot;#CC0099&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC0099&quot;)"/>
+        <polygon points="207.61,105 216.27,110 216.27,120 207.61,125 198.95,120 198.95,110" style="fill:#993399" onClick="ChangeSelectedColor(&quot;#993399&quot;)" onMouseOver="ChangePreviewColor(&quot;#993399&quot;)"/>
+        <polygon points="25.96,120 34.62,125 34.62,135 25.96,140 17.3,135 17.3,125" style="fill:#333300" onClick="ChangeSelectedColor(&quot;#333300&quot;)" onMouseOver="ChangePreviewColor(&quot;#333300&quot;)"/>
+        <polygon points="43.26,120 51.92,125 51.92,135 43.26,140 34.6,135 34.6,125" style="fill:#669900" onClick="ChangeSelectedColor(&quot;#669900&quot;)" onMouseOver="ChangePreviewColor(&quot;#669900&quot;)"/>
+        <polygon points="60.56,120 69.22,125 69.22,135 60.56,140 51.9,135 51.9,125" style="fill:#99FF33" onClick="ChangeSelectedColor(&quot;#99FF33&quot;)" onMouseOver="ChangePreviewColor(&quot;#99FF33&quot;)"/>
+        <polygon points="77.86,120 86.52,125 86.52,135 77.86,140 69.2,135 69.2,125" style="fill:#CCFF66" onClick="ChangeSelectedColor(&quot;#CCFF66&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCFF66&quot;)"/>
+        <polygon points="95.16,120 103.82,125 103.82,135 95.16,140 86.5,135 86.5,125" style="fill:#FFFF99" onClick="ChangeSelectedColor(&quot;#FFFF99&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFFF99&quot;)"/>
+        <polygon points="112.46,120 121.12,125 121.12,135 112.46,140 103.8,135 103.8,125" style="fill:#FFCC99" onClick="ChangeSelectedColor(&quot;#FFCC99&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFCC99&quot;)"/>
+        <polygon points="129.76,120 138.42,125 138.42,135 129.76,140 121.1,135 121.1,125" style="fill:#FF9999" onClick="ChangeSelectedColor(&quot;#FF9999&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF9999&quot;)"/>
+        <polygon points="147.06,120 155.72,125 155.72,135 147.06,140 138.4,135 138.4,125" style="fill:#FF6699" onClick="ChangeSelectedColor(&quot;#FF6699&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF6699&quot;)"/>
+        <polygon points="164.36,120 173.02,125 173.02,135 164.36,140 155.7,135 155.7,125" style="fill:#FF3399" onClick="ChangeSelectedColor(&quot;#FF3399&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF3399&quot;)"/>
+        <polygon points="181.66,120 190.32,125 190.32,135 181.66,140 173,135 173,125" style="fill:#CC3399" onClick="ChangeSelectedColor(&quot;#CC3399&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC3399&quot;)"/>
+        <polygon points="198.96,120 207.62,125 207.62,135 198.96,140 190.3,135 190.3,125" style="fill:#990099" onClick="ChangeSelectedColor(&quot;#990099&quot;)" onMouseOver="ChangePreviewColor(&quot;#990099&quot;)"/>
+        <polygon points="34.61,135 43.27,140 43.27,150 34.61,155 25.95,150 25.95,140" style="fill:#666633" onClick="ChangeSelectedColor(&quot;#666633&quot;)" onMouseOver="ChangePreviewColor(&quot;#666633&quot;)"/>
+        <polygon points="51.91,135 60.57,140 60.57,150 51.91,155 43.25,150 43.25,140" style="fill:#99CC00" onClick="ChangeSelectedColor(&quot;#99CC00&quot;)" onMouseOver="ChangePreviewColor(&quot;#99CC00&quot;)"/>
+        <polygon points="69.21,135 77.87,140 77.87,150 69.21,155 60.55,150 60.55,140" style="fill:#CCFF33" onClick="ChangeSelectedColor(&quot;#CCFF33&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCFF33&quot;)"/>
+        <polygon points="86.51,135 95.17,140 95.17,150 86.51,155 77.85,150 77.85,140" style="fill:#FFFF66" onClick="ChangeSelectedColor(&quot;#FFFF66&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFFF66&quot;)"/>
+        <polygon points="103.81,135 112.47,140 112.47,150 103.81,155 95.15,150 95.15,140" style="fill:#FFCC66" onClick="ChangeSelectedColor(&quot;#FFCC66&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFCC66&quot;)"/>
+        <polygon points="121.11,135 129.77,140 129.77,150 121.11,155 112.45,150 112.45,140" style="fill:#FF9966" onClick="ChangeSelectedColor(&quot;#FF9966&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF9966&quot;)"/>
+        <polygon points="138.41,135 147.07,140 147.07,150 138.41,155 129.75,150 129.75,140" style="fill:#FF6666" onClick="ChangeSelectedColor(&quot;#FF6666&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF6666&quot;)"/>
+        <polygon points="155.71,135 164.37,140 164.37,150 155.71,155 147.05,150 147.05,140" style="fill:#FF0066" onClick="ChangeSelectedColor(&quot;#FF0066&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF0066&quot;)"/>
+        <polygon points="173.01,135 181.67,140 181.67,150 173.01,155 164.35,150 164.35,140" style="fill:#CC6699" onClick="ChangeSelectedColor(&quot;#CC6699&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC6699&quot;)"/>
+        <polygon points="190.31,135 198.97,140 198.97,150 190.31,155 181.65,150 181.65,140" style="fill:#993366" onClick="ChangeSelectedColor(&quot;#993366&quot;)" onMouseOver="ChangePreviewColor(&quot;#993366&quot;)"/>
+        <polygon points="43.26,150 51.92,155 51.92,165 43.26,170 34.6,165 34.6,155" style="fill:#999966" onClick="ChangeSelectedColor(&quot;#999966&quot;)" onMouseOver="ChangePreviewColor(&quot;#999966&quot;)"/>
+        <polygon points="60.56,150 69.22,155 69.22,165 60.56,170 51.9,165 51.9,155" style="fill:#CCCC00" onClick="ChangeSelectedColor(&quot;#CCCC00&quot;)" onMouseOver="ChangePreviewColor(&quot;#CCCC00&quot;)"/>
+        <polygon points="77.86,150 86.52,155 86.52,165 77.86,170 69.2,165 69.2,155" style="fill:#FFFF00" onClick="ChangeSelectedColor(&quot;#FFFF00&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFFF00&quot;)"/>
+        <polygon points="95.16,150 103.82,155 103.82,165 95.16,170 86.5,165 86.5,155" style="fill:#FFCC00" onClick="ChangeSelectedColor(&quot;#FFCC00&quot;)" onMouseOver="ChangePreviewColor(&quot;#FFCC00&quot;)"/>
+        <polygon points="112.46,150 121.12,155 121.12,165 112.46,170 103.8,165 103.8,155" style="fill:#FF9933" onClick="ChangeSelectedColor(&quot;#FF9933&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF9933&quot;)"/>
+        <polygon points="129.76,150 138.42,155 138.42,165 129.76,170 121.1,165 121.1,155" style="fill:#FF6600" onClick="ChangeSelectedColor(&quot;#FF6600&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF6600&quot;)"/>
+        <polygon points="147.06,150 155.72,155 155.72,165 147.06,170 138.4,165 138.4,155" style="fill:#FF5050" onClick="ChangeSelectedColor(&quot;#FF5050&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF5050&quot;)"/>
+        <polygon points="164.36,150 173.02,155 173.02,165 164.36,170 155.7,165 155.7,155" style="fill:#CC0066" onClick="ChangeSelectedColor(&quot;#CC0066&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC0066&quot;)"/>
+        <polygon points="181.66,150 190.32,155 190.32,165 181.66,170 173,165 173,155" style="fill:#660033" onClick="ChangeSelectedColor(&quot;#660033&quot;)" onMouseOver="ChangePreviewColor(&quot;#660033&quot;)"/>
+        <polygon points="51.91,165 60.57,170 60.57,180 51.91,185 43.25,180 43.25,170" style="fill:#996633" onClick="ChangeSelectedColor(&quot;#996633&quot;)" onMouseOver="ChangePreviewColor(&quot;#996633&quot;)"/>
+        <polygon points="69.21,165 77.87,170 77.87,180 69.21,185 60.55,180 60.55,170" style="fill:#CC9900" onClick="ChangeSelectedColor(&quot;#CC9900&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC9900&quot;)"/>
+        <polygon points="86.51,165 95.17,170 95.17,180 86.51,185 77.85,180 77.85,170" style="fill:#FF9900" onClick="ChangeSelectedColor(&quot;#FF9900&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF9900&quot;)"/>
+        <polygon points="103.81,165 112.47,170 112.47,180 103.81,185 95.15,180 95.15,170" style="fill:#CC6600" onClick="ChangeSelectedColor(&quot;#CC6600&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC6600&quot;)"/>
+        <polygon points="121.11,165 129.77,170 129.77,180 121.11,185 112.45,180 112.45,170" style="fill:#FF3300" onClick="ChangeSelectedColor(&quot;#FF3300&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF3300&quot;)"/>
+        <polygon points="138.41,165 147.07,170 147.07,180 138.41,185 129.75,180 129.75,170" style="fill:#FF0000" onClick="ChangeSelectedColor(&quot;#FF0000&quot;)" onMouseOver="ChangePreviewColor(&quot;#FF0000&quot;)"/>
+        <polygon points="155.71,165 164.37,170 164.37,180 155.71,185 147.05,180 147.05,170" style="fill:#CC0000" onClick="ChangeSelectedColor(&quot;#CC0000&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC0000&quot;)"/>
+        <polygon points="173.01,165 181.67,170 181.67,180 173.01,185 164.35,180 164.35,170" style="fill:#990033" onClick="ChangeSelectedColor(&quot;#990033&quot;)" onMouseOver="ChangePreviewColor(&quot;#990033&quot;)"/>
+        <polygon points="60.56,180 69.22,185 69.22,195 60.56,200 51.9,195 51.9,185" style="fill:#663300" onClick="ChangeSelectedColor(&quot;#663300&quot;)" onMouseOver="ChangePreviewColor(&quot;#663300&quot;)"/>
+        <polygon points="77.86,180 86.52,185 86.52,195 77.86,200 69.2,195 69.2,185" style="fill:#996600" onClick="ChangeSelectedColor(&quot;#996600&quot;)" onMouseOver="ChangePreviewColor(&quot;#996600&quot;)"/>
+        <polygon points="95.16,180 103.82,185 103.82,195 95.16,200 86.5,195 86.5,185" style="fill:#CC3300" onClick="ChangeSelectedColor(&quot;#CC3300&quot;)" onMouseOver="ChangePreviewColor(&quot;#CC3300&quot;)"/>
+        <polygon points="112.46,180 121.12,185 121.12,195 112.46,200 103.8,195 103.8,185" style="fill:#993300" onClick="ChangeSelectedColor(&quot;#993300&quot;)" onMouseOver="ChangePreviewColor(&quot;#993300&quot;)"/>
+        <polygon points="129.76,180 138.42,185 138.42,195 129.76,200 121.1,195 121.1,185" style="fill:#990000" onClick="ChangeSelectedColor(&quot;#990000&quot;)" onMouseOver="ChangePreviewColor(&quot;#990000&quot;)"/>
+        <polygon points="147.06,180 155.72,185 155.72,195 147.06,200 138.4,195 138.4,185" style="fill:#800000" onClick="ChangeSelectedColor(&quot;#800000&quot;)" onMouseOver="ChangePreviewColor(&quot;#800000&quot;)"/>
+        <polygon points="164.36,180 173.02,185 173.02,195 164.36,200 155.7,195 155.7,185" style="fill:#993333" onClick="ChangeSelectedColor(&quot;#993333&quot;)" onMouseOver="ChangePreviewColor(&quot;#993333&quot;)"/>
+      </svg>
+      <div id="preview"></div>
+    </div>
+    <script>
+      var color = "#FFFFFF";
+
+      function ChangeSelectedColor(hex) {
+  			color = hex;
+  		}
+
+  		function ChangePreviewColor(hex) {
+  			if (hex == "none")
+  				hex = color;
+        document.getElementById("preview").style.backgroundColor = hex;
+  		}
+    </script>
+  </body>
+</html>
